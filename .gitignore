@@ -22,7 +22,7 @@
 include/.DS_Store
 
 # Local history
-./vscode
+.vscode/
 
 # Libraries
 *.lib
