@@ -46,10 +46,8 @@
 #define TC_BG_CYN "\x1B[46m"
 #define TC_BG_WHT "\x1B[47m"
 
-//#define tc_clear_screen() puts("\x1B[2J")
-//improved clear screen
+
 #define clear_screen() system("clear")
-//write(1, "\033[H\033[2J\033[3J", 11)
 
 #define tc_move_cursor(X, Y) printf("\033[%d;%dH", Y, X)
 

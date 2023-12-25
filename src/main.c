@@ -22,21 +22,9 @@ void tc_echo_on(){
 	tcsetattr(1, TCSANOW, &term);
 }
 
-/*
-void resize_window() {
-    clear_screen();
-    int cols = 0;
-    int rows = 0;
-    tc_get_cols_rows(&cols, &rows);
-    char welcome[] = "WELCOME TO SOKOBAN GAME!";
-    tc_move_cursor((int)((cols - strlen(welcome)) / 2), (int)rows / 4);
-    printf("%s%s%s\n", WHT_ON_RED, welcome, TC_NRM);
-}
-*/
 
 
 int main(){
-    //signal(SIGWINCH, &resize_window);
     clear_screen();
     Bool quit = false;
     int current_level = FIRST_LEVEL;
@@ -48,15 +36,17 @@ int main(){
     char msg[100] = "WELCOME TO SOKOBAN GAME!";
     tc_move_cursor((int)((cols - strlen(msg)) / 2), (int)rows / 4);
     printf("%s%s%s%s%s\n", BOLD, WHT_ON_RED, msg, TC_NRM, NORMAL);
-    affiche_map(map);
-    
+    display_map(map);
+  
 
 
-    while(!quit) {  
-        initscr();   
+
+    while(!quit) { 
+        initscr();  
         noecho();
         cbreak();
         timeout(-1);
+
         input = getchar();
         endwin();   
         clear_screen();
@@ -65,7 +55,7 @@ int main(){
         }
         tc_move_cursor((int)((cols - strlen(msg)) / 2), (int)rows / 4);
         printf("%s%s%s%s%s\n", BOLD, WHT_ON_RED, msg, TC_NRM, NORMAL);
-        affiche_map(map);
+        display_map(map);
 
         switch(input){
             case UP:
@@ -95,8 +85,8 @@ int main(){
                 break;
             case 'r':
                 map = initMap("level.txt", current_level);
-                affiche_map(map);
-                printf("Redemarrer\n");
+                display_map(map);
+                printf("Restart\n");
                 endwin();
                 break;
             default:
@@ -126,7 +116,7 @@ int main(){
                     printf("%s%s%s%s%s\n", BOLD, WHT_ON_RED, msg, TC_NRM, NORMAL);
                     current_level = SECOND_LEVEL;
                     map = initMap("level.txt", current_level);
-                    affiche_map(map);
+                    display_map(map);
                     endwin();
                 } else if (input == 'q') {
                     quit = true;

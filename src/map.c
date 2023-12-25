@@ -63,7 +63,7 @@ Map initMap(const char* file_path, int level) {
 
 }
 
-void affiche_map(Map map) {
+void display_map(Map map) {
     int cols = 0;
     int rows = 0;
     tc_get_cols_rows(&cols, &rows);
@@ -71,12 +71,12 @@ void affiche_map(Map map) {
     for (i = 0; i < map->nb_lgn; i++) {
         tc_move_cursor((int)(cols / 2 - map->nb_col / 2), (int)rows / 3+i);
         for (int j = 0; j < map->nb_col; j++) {
-            if (map->grid[i][j] == ETOILE) {
+            if (map->grid[i][j] == CLOSED_GOAL) {
                 printf("%s%c%s", TC_RED, BOX, TC_NRM);
             } else if (i == map->player.posY && j == map->player.posX) {
                 printf("%s%c%s", TC_GRN, PLAYER, TC_NRM);
-            } else if (map->grid[i][j] == GOAL) {
-                printf("%s%c%s", TC_YEL, GOAL, TC_NRM);
+            } else if (map->grid[i][j] == OPEN_GOAL) {
+                printf("%s%c%s", TC_YEL, OPEN_GOAL, TC_NRM);
             } else if (map->grid[i][j] == BOX) {
                 printf("%s%c%s", TC_MAG, BOX, TC_NRM);
             } else if (map->grid[i][j] == WALL) {

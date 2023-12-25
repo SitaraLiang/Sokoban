@@ -1,10 +1,8 @@
 /**
  * \file player.h
- * \brief Header file incluant la structure player et un type enum direction 
- * \author TAYEBI Lyna 
+ * \brief Header file including the player structure and an enum type
  *
- * Ce fichier player.h inclus une structure player. \n
- * Ainsi qu'un enum pour decrire les directions que l'utilisateur va entrer. \n
+ * This file includes a basic structure of player, and an enum representing the direction\n
  */
 
 #ifndef PLAYER_HEADER
@@ -12,7 +10,7 @@
 
 
 /**
- * \brief Structure player
+ * \brief Structure of player
  * 
  * Cette structure contient la position du joueur, soit player dans la map. \n
 */
@@ -26,16 +24,16 @@ typedef struct player{
 
 /**
  * \enum Direction
- * \brief Type Enum direction
+ * \brief Type enum of direction
  * 
- * Enumération pour la direction dans la map
+ * Using the type enum in C for representing the direction player can move in the game. 
 */
 
 typedef enum Direction{
-	UP = 'w', ///< w: haut
-	LEFT = 'a', ///< a: gauche
-	DOWN = 's', ///< s: bas
-	RIGHT = 'd' ///< d: droite
+	UP = 'w', ///< w: up
+	LEFT = 'a', ///< a: left
+	DOWN = 's', ///< s: down
+	RIGHT = 'd' ///< d: right
 } Direction;
 
 #endif

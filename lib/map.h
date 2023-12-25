@@ -1,12 +1,10 @@
 /**
  * \file map.h
- * \brief Un header file inclus la structure de map et les operations sur le map
- * \author Xinyi LIANG
+ * \brief Header file includes the map structure and operations on the map
  *
- * Le fichier map.h inclus la structure de map qui a un champ de 2D tableau avec le type enum CaseType pour représente le map\n
- * Il inclut aussi deux fonctions par rapport le map\n
- * Pour initialise le map à partir d'un fichier et pour display le map\n
- */
+ * This file includes the map structure which has a 2D array field with enum type CaseType to represent the map\n
+ * It also includes two functions related to the map, in order to initialize the map from a file and to display the map\n
+ */ 
 
 
 #ifndef MAP_H
@@ -16,46 +14,46 @@
 #include "player.h"
 
 /**
- * \brief Une énumération pour définir les entités de map
+ * \brief An enumeration to define map entities
  */
 typedef enum Characters{
 	WALL = '#',
-	BOX = 'x',
+	BOX = 'x', 
     PLAYER = 'p',
-	GOAL = 'o',
-	ETOILE = '*',
+	OPEN_GOAL = 'o',
+	CLOSED_GOAL = '*',
 	NONE = ' '
 } Characters;
 
 /**
- * \brief Structure map
+ * \brief Structure of map
  *
- * Cette structure est destinée à définir un map, comprend tous les attributs nécessaires.\n
+ * This structure is intended to define a map, includes all the necessary attributes.\n
  */
 typedef struct map {
-	enum Characters** grid; //!< Tableau contenant les entités présents dans le jeu
-	int nb_col; //!< Nombre de colonne de game_grid
-	int nb_lgn; //!< Nomber de ligne de game_grid
-	Player player;
+	enum Characters** grid; //!< Table 2D containing the entities present in the game
+	int nb_col; //!< Number of game_grid columns
+	int nb_lgn; //!< Number of game_grid rows
+	Player player; //!< Object of the structure of player
 } StrMap, *Map;
 
 
 /**
- * \brief Initialise le map à partir d'un fichier
- * \param [in] file_path le path du fichier
- * \param [in] level valeur int pour determiner le niveau du map
- * \return un pointeur sur la structure map
+ * \brief Initialize the map from a file
+ * \param [in] file_path the path of the file
+ * \param [in] level integer value to determine the map level
+ * \return a pointer to the map structure
  */
 Map initMap(const char* file_path, int level);
 
 
 
 /**
- * \brief affiche le map 
- * \param [in] map le pointeur sur la structure de map
- * \return Pas de valeur retourne
+ * \brief Display the map on the terminal 
+ * \param [in] map the pointer to the map structure
+ * \return No return value
  */
-void affiche_map(Map map);
+void display_map(Map map);
 
 
 
