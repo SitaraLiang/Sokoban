@@ -66,22 +66,22 @@ For the implementation of the game, the project is divided into several files, w
 ### Structures of datas
 The project contains a structure of map and a structure of player. To better characterize the player and the map, the project contains other two enumerations: one for storing all the necessary characters we used to design the grid of map, and another for storing all the key the player uses to control the game (move, restart or quit the game).
 
-
-|Player||
-|----|
+#### player (structure)
+|||
+|--|--|
 |pos_x| *The column of the player's current position* |
 |pos_y| *The row of the player's current position* |
 
-
-|  Map |        | 
+#### map (structure)
+|   |        | 
 |--------- |-------------------|
 |   grid     |    *2D array containing the entities present in the game*        | 
 |   player     |    *The object of player*      | 
 |   number of columns     |  *Total number of map columns*      | 
 |    number of rows       |  *Total number of map rows*     | 
 
-
-|  Characters  |        |  |
+#### Characters (enum)
+|   |        | |
 |--------- |-----|-------------------|
 |WALL|'#'| *Symbol of wall, player and boxes cannot cross the wall*|
 |BOX|'x'| *The box symbol that changes color when a goal is reached*|
@@ -90,8 +90,8 @@ The project contains a structure of map and a structure of player. To better cha
 |CLOSED_GOAL|'*'| *The goal that already has a box in it* |
 |NONE|' '| *Areas where player and boxes can move*|
 
-
-|  Direction |    | 
+#### Direction (enum)
+|   |    | 
 |---------|-------------------|
 |UP|'w'|
 |LEFT|'a'|
