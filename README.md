@@ -73,32 +73,32 @@ The project contains a structure of map and a structure of player. To better cha
 |pos_y|| *The row of the player's current position* |
 
 #### map (structure)
-|   |  |      | 
-|--------- |--|-------------------|
-|   grid     |  |  *2D array containing the entities present in the game*        | 
-|   player     |  |  *The object of player*      | 
-|   number of columns     |  |  *Total number of map columns*      | 
-|    number of rows     |  |  *Total number of map rows*     | 
+|   |        | 
+|--------- |-------------------|
+|   grid     |    *2D array containing the entities present in the game*        | 
+|   player     |    *The object of player*      | 
+|   number of columns     |  *Total number of map columns*      | 
+|    number of rows       |  *Total number of map rows*     | 
 
 #### Characters (enum)
-|   |    |    | |
-|--------- |---|-----|-------------------|
-|WALL||'#'| *Symbol of wall, player and boxes cannot cross the wall*|
-|BOX||'x'| *The box symbol that changes color when a goal is reached*|
-|PLAYER||'p'| *Symbol of player*|
-|OPEN_GOAL||'o'| *The goal that doesn't have a box in it*|
-|CLOSED_GOAL||'*'| *The goal that already has a box in it* |
-|NONE||' '| *Areas where player and boxes can move*|
+|   |        | |
+|--------- |-----|-------------------|
+|WALL|'#'| *Symbol of wall, player and boxes cannot cross the wall*|
+|BOX|'x'| *The box symbol that changes color when a goal is reached*|
+|PLAYER|'p'| *Symbol of player*|
+|OPEN_GOAL|'o'| *The goal that doesn't have a box in it*|
+|CLOSED_GOAL|'*'| *The goal that already has a box in it* |
+|NONE|' '| *Areas where player and boxes can move*|
 
 #### Direction (enum)
-|   |  |    | 
-|--------- |--|-------------------|
-|UP||'w'|
-|LEFT||'a'|
-|DOWN||'s'|
-|RIGHT||'d'|
-|RESTART||'r'|
-|QUIT||'q'|
+|   |    | 
+|---------|-------------------|
+|UP|'w'|
+|LEFT|'a'|
+|DOWN|'s'|
+|RIGHT|'d'|
+|RESTART|'r'|
+|QUIT|'q'|
 
 ## Thank you
 This is my first C project in school, a very simple terminal game using basic features of language C and ncurses library. There are many shortcomings and areas for improvement. Any suggestions for the game are welcome! :)
