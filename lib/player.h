@@ -33,7 +33,9 @@ typedef enum Direction{
 	UP = 'w', ///< w: up
 	LEFT = 'a', ///< a: left
 	DOWN = 's', ///< s: down
-	RIGHT = 'd' ///< d: right
+	RIGHT = 'd', ///< d: right
+	RESTART = 'r', ///< r: restart
+	QUIT = 'q' ///< q: quit
 } Direction;
 
 #endif
