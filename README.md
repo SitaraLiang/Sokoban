@@ -48,7 +48,7 @@ This terminal game is compatible with the systems under Unix: Linux, macOS, Ubun
 
 
 
-## Organisation du projet
+## Organisation du projet 🛠️
 For the implementation of the game, the project is divided into several files, where `main.c` contains only the control of the game and IO commands.
 
 - `lib/` contains macros and header functions to make the code more readable and concise
@@ -100,5 +100,5 @@ The project contains a structure of map and a structure of player. To better cha
 |RESTART|'r'|
 |QUIT|'q'|
 
-## Thank you
+## Thank you ☕️
 This is my first C project in school, a very simple terminal game using basic features of language C and ncurses library. There are many shortcomings and areas for improvement. Any suggestions for the game are welcome! :)
