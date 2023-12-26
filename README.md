@@ -1,5 +1,5 @@
 # Sokoban
-A very basic terminal-based game sokoban using C
+A basic terminal-based game sokoban using C
 
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -100,5 +100,5 @@ The project contains a structure of map and a structure of player. To better cha
 |RESTART|'r'|
 |QUIT|'q'|
 
-## Thank you ☕️
+## Thank You ☕️
 This is my first C project in school, a very simple terminal game using basic features of language C and ncurses library. There are many shortcomings and areas for improvement. Any suggestions for the game are welcome! :)
